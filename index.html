@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excelência Educativa - Centro de Explicações 9ª Classe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .floating-button {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-graduation-cap text-blue-600 text-2xl mr-2"></i>
+                        <span class="font-bold text-xl text-blue-600">Excelência Educativa</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-blue-600 font-medium">Início</a>
+                    <a href="#sobre" class="text-gray-700 hover:text-blue-600 font-medium">Sobre Nós</a>
+                    <a href="#disciplinas" class="text-gray-700 hover:text-blue-600 font-medium">Disciplinas</a>
+                    <a href="#professores" class="text-gray-700 hover:text-blue-600 font-medium">Professores</a>
+                    <a href="#contactos" class="text-gray-700 hover:text-blue-600 font-medium">Contactos</a>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 focus:outline-none">
+                        <i class="fas fa-bars text-gray-700 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white border-t">
+            <div class="flex flex-col space-y-2 px-4 py-3">
+                <a href="#inicio" class="block py-2 text-gray-700 hover:text-blue-600">Início</a>
+                <a href="#sobre" class="block py-2 text-gray-700 hover:text-blue-600">Sobre Nós</a>
+                <a href="#disciplinas" class="block py-2 text-gray-700 hover:text-blue-600">Disciplinas</a>
+                <a href="#professores" class="block py-2 text-gray-700 hover:text-blue-600">Professores</a>
+                <a href="#contactos" class="block py-2 text-gray-700 hover:text-blue-600">Contactos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient text-white py-20 md:py-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Preparação para o 9º Ano com Excelência</h1>
+                    <p class="text-xl mb-8 text-blue-100">Orientação personalizada para dominar os conteúdos essenciais e enfrentar o 9º ano com confiança.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#contactos" class="bg-white text-blue-600 hover:bg-blue-50 font-bold py-3 px-6 rounded-lg text-center transition duration-300">
+                            <i class="fas fa-phone-alt mr-2"></i> Marcar Aula
+                        </a>
+                        <a href="#disciplinas" class="border-2 border-white text-white hover:bg-blue-700 font-bold py-3 px-6 rounded-lg text-center transition duration-300">
+                            <i class="fas fa-book mr-2"></i> Ver Disciplinas
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Estudantes aprendendo" class="rounded-xl shadow-2xl w-full max-w-md border-4 border-white">
+                        <div class="absolute -bottom-6 -right-6 bg-yellow-400 text-gray-800 font-bold py-3 px-6 rounded-lg shadow-lg floating-button">
+                            <i class="fas fa-star mr-2"></i> Melhores Resultados
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">95%</div>
+                    <div class="text-gray-600">Taxa de Aprovação</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">10+</div>
+                    <div class="text-gray-600">Anos de Experiência</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">500+</div>
+                    <div class="text-gray-600">Alunos Formados</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl font-bold text-blue-600 mb-2">100%</div>
+                    <div class="text-gray-600">Satisfação dos Pais</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre o Nosso Centro</h2>
+                    <p class="text-gray-600 mb-6">Especializados na transição para o 9º ano, oferecemos um programa completo que aborda todas as disciplinas fundamentais com metodologias ativas e personalizadas.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <p class="text-gray-700">Aulas em grupos reduzidos (máximo 8 alunos)</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <p class="text-gray-700">Material didático exclusivo e atualizado</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <p class="text-gray-700">Acompanhamento individualizado do progresso</p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <p class="text-gray-700">Preparação específica para exames nacionais</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Porquê Escolher-nos?</h3>
+                        <div class="space-y-6">
+                            <div class="flex">
+                                <div class="bg-blue-600 text-white p-3 rounded-full h-12 w-12 flex items-center justify-center mr-4">
+                                    <i class="fas fa-chalkboard-teacher text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Professores Especializados</h4>
+                                    <p class="text-gray-600">Equipe com formação específica no 9º ano e vasta experiência pedagógica.</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="bg-blue-600 text-white p-3 rounded-full h-12 w-12 flex items-center justify-center mr-4">
+                                    <i class="fas fa-user-graduate text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Método Personalizado</h4>
+                                    <p class="text-gray-600">Plano de estudos adaptado às necessidades e ritmo de cada aluno.</p>
+                                </div>
+                            </div>
+                            <div class="flex">
+                                <div class="bg-blue-600 text-white p-3 rounded-full h-12 w-12 flex items-center justify-center mr-4">
+                                    <i class="fas fa-chart-line text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Resultados Comprovados</h4>
+                                    <p class="text-gray-600">Alunos com melhores classificações e preparados para o ensino secundário.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section id="disciplinas" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Disciplinas Disponíveis</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Cobertura completa de todas as disciplinas fundamentais do 9º ano com abordagem aprofundada.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Math Card -->
+                <div class="subject-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-red-500 p-6 text-white">
+                        <i class="fas fa-square-root-alt text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Matemática</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Domine álgebra, geometria, funções e estatística com nossa abordagem prática e visual.</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Resolução de problemas
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Preparação para testes
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Exercícios práticos
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Portuguese Card -->
+                <div class="subject-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-blue-500 p-6 text-white">
+                        <i class="fas fa-book-open text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Português</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Gramática, interpretação textual e produção escrita com foco nos conteúdos avaliados.</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Análise literária
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Técnicas de redação
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Preparação para exames
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Science Card -->
+                <div class="subject-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-green-500 p-6 text-white">
+                        <i class="fas fa-flask text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Ciências Naturais</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Compreenda os sistemas terrestres, corpo humano e sustentabilidade com experimentos e modelos.</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Aulas práticas
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Resumos esquemáticos
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Preparação para testes
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- History Card -->
+                <div class="subject-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-yellow-500 p-6 text-white">
+                        <i class="fas fa-landmark text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold">História</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Da Revolução Industrial à contemporaneidade com linha do tempo interativa e análise documental.</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Contextualização histórica
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Análise de fontes
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Técnicas de estudo
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Geography Card -->
+                <div class="subject-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-indigo-500 p-6 text-white">
+                        <i class="fas fa-globe-europe text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Geografia</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">População, atividades económicas e ambiente com mapas, gráficos e estudos de caso atuais.</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Interpretação de dados
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Análise espacial
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Estudos de caso
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- English Card -->
+                <div class="subject-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-purple-500 p-6 text-white">
+                        <i class="fas fa-language text-4xl mb-4"></i>
+                        <h3 class="text-xl font-bold">Inglês</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Gramática, compreensão e produção oral e escrita com materiais autênticos e interativos.</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Conversação
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Vocabulário temático
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Preparação para testes
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section id="professores" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Nossa Equipe de Professores</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Especialistas dedicados com formação específica e paixão pelo ensino.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Teacher 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Professora de Matemática" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Dra. Ana Silva</h3>
+                        <p class="text-blue-600 font-medium mb-4">Matemática e Ciências</p>
+                        <p class="text-gray-600 mb-4">Mestre em Matemática Aplicada com 12 anos de experiência no ensino básico.</p>
+                        <div class="flex space-x-3">
+                            <div class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Álgebra</div>
+                            <div class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Geometria</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Teacher 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Professor de Português" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Prof. Carlos Mendes</h3>
+                        <p class="text-blue-600 font-medium mb-4">Português e História</p>
+                        <p class="text-gray-600 mb-4">Licenciado em Línguas e Literaturas com especialização em pedagogia diferenciada.</p>
+                        <div class="flex space-x-3">
+                            <div class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Gramática</div>
+                            <div class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Literatura</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Teacher 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-300 hover:shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Professora de Inglês" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1">Prof.ª Sofia Almeida</h3>
+                        <p class="text-blue-600 font-medium mb-4">Inglês e Geografia</p>
+                        <p class="text-gray-600 mb-4">Formada em Línguas e Relações Internacionais com experiência em escolas internacionais.</p>
+                        <div class="flex space-x-3">
+                            <div class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Conversação</div>
+                            <div class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-medium">Cultura</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Depoimentos de Pais e Alunos</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">A confiança que depositam em nós é o nosso maior orgulho.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Mãe do João" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Carla Martins</h4>
+                            <p class="text-gray-600">Mãe do João, 9º ano</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"O meu filho estava com muitas dificuldades em Matemática e depois de 3 meses no centro já subiu duas notas. Os professores são extremamente dedicados e o acompanhamento é personalizado."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Pai da Maria" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Rui Oliveira</h4>
+                            <p class="text-gray-600">Pai da Maria, 9º ano</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"A minha filha sempre teve boas notas, mas queria prepará-la melhor para os exames nacionais. As técnicas de estudo que aprendeu aqui fizeram toda a diferença e ela está muito mais confiante."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1542103749-8ef59b94f47e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Aluno André" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">André Santos</h4>
+                            <p class="text-gray-600">Aluno, 9º ano</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"Adoro as aulas de Ciências aqui! Os professores explicam de um jeito que a gente entende mesmo e fazem experiências legais. Minhas notas melhoraram muito e agora até gosto de estudar."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80" alt="Mãe da Beatriz" class="w-16 h-16 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Teresa Gomes</h4>
+                            <p class="text-gray-600">Mãe da Beatriz, 9º ano</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">"O centro não só ajudou minha filha academicamente como também a tornou mais organizada e autónoma nos estudos. O relatório mensal de progresso é muito detalhado e útil."</p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Planos Acessíveis</h2>
+                <p class="text-xl text-blue-100 max-w-2xl mx-auto">Investimento na educação do seu filho com opções flexíveis.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-white text-gray-800 rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-gray-100 p-6">
+                        <h3 class="text-xl font-bold mb-2">Básico</h3>
+                        <p class="text-gray-600">Ideal para reforço em 1 disciplina</p>
+                    </div>
+                    <div class="p-6 border-b border-gray-200">
+                        <div class="text-4xl font-bold mb-2">€60<span class="text-lg font-normal text-gray-600">/mês</span></div>
+                        <p class="text-gray-600">2 aulas semanais de 60min</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> 1 disciplina à escolha
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Material de apoio
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Acesso à plataforma online
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times text-red-400 mr-2"></i> Acompanhamento personalizado
+                            </li>
+                        </ul>
+                        <a href="#contactos" class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg text-center transition duration-300">
+                            Inscrever-se
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Popular Plan -->
+                <div class="bg-white text-gray-800 rounded-xl shadow-lg overflow-hidden transform scale-105">
+                    <div class="bg-blue-600 text-white p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Completo</h3>
+                                <p>Melhor opção para resultados garantidos</p>
+                            </div>
+                            <span class="bg-yellow-400 text-gray-800 text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>
+                        </div>
+                    </div>
+                    <div class="p-6 border-b border-gray-200">
+                        <div class="text-4xl font-bold mb-2">€110<span class="text-lg font-normal text-gray-600">/mês</span></div>
+                        <p class="text-gray-600">4 aulas semanais de 60min</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Até 3 disciplinas
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Material de apoio exclusivo
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Acesso completo à plataforma
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Acompanhamento personalizado
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Relatório mensal detalhado
+                            </li>
+                        </ul>
+                        <a href="#contactos" class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg text-center transition duration-300">
+                            Inscrever-se
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Premium Plan -->
+                <div class="bg-white text-gray-800 rounded-xl shadow-lg overflow-hidden">
+                    <div class="bg-gray-100 p-6">
+                        <h3 class="text-xl font-bold mb-2">Premium</h3>
+                        <p class="text-gray-600">Preparação intensiva para exames</p>
+                    </div>
+                    <div class="p-6 border-b border-gray-200">
+                        <div class="text-4xl font-bold mb-2">€150<span class="text-lg font-normal text-gray-600">/mês</span></div>
+                        <p class="text-gray-600">6 aulas semanais + sábados</p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Todas as disciplinas
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Material premium
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Acesso ilimitado à plataforma
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Tutor pessoal
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Simulados mensais
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i> Workshops extras
+                            </li>
+                        </ul>
+                        <a href="#contactos" class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg text-center transition duration-300">
+                            Inscrever-se
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center text-blue-100">
+                <p>Descontos disponíveis para irmãos e pagamentos trimestrais. Marque uma aula experimental gratuita!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contactos" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Entre em Contacto</h2>
+                    <p class="text-gray-600 mb-8">Estamos disponíveis para esclarecer todas as suas dúvidas sobre o nosso método e planos de estudo.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Localização</h4>
+                                <p class="text-gray-600">Rua da Educação, 123<br>Lisboa, Portugal</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Telefone</h4>
+                                <p class="text-gray-600">+351 912 345 678<br>Seg-Sex: 9h-19h</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                <p class="text-gray-600">info@excelenciaeducativa.pt<br>Resposta em 24h</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="font-bold text-gray-800 mb-4">Siga-nos</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition duration-300">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-400 text-white p-3 rounded-full hover:bg-blue-500 transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition duration-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-blue-700 text-white p-3 rounded-full hover:bg-blue-800 transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Envie-nos uma Mensagem</h3>
+                        <form>
+                            <div class="mb-6">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+                                <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                                <select id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                    <option>Informações sobre cursos</option>
+                                    <option>Marcar aula experimental</option>
+                                    <option>Dúvidas sobre preços</option>
+                                    <option>Outro assunto</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                                <i class="fas fa-paper-plane mr-2"></i> Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Perguntas Frequentes</h2>
+                <p class="text-xl text-gray-600">Tire suas dúvidas sobre nosso centro de explicações.</p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- Question 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-lg font-bold text-gray-800">Como funcionam as aulas?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p class="text-gray-600">As aulas são ministradas em grupos pequenos (máximo 8 alunos) para garantir atenção individualizada. Cada sessão tem duração de 60 minutos e combina explicação teórica com exercícios práticos. Oferecemos também apoio online através da nossa plataforma exclusiva.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-lg font-bold text-gray-800">Qual o horário de funcionamento?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p class="text-gray-600">Funcionamos de segunda a sexta das 14h às 20h e aos sábados das 9h às 13h. Os horários das aulas são agendados conforme a disponibilidade do aluno e dos professores, com flexibilidade para ajustes quando necessário.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-lg font-bold text-gray-800">Como é feito o acompanhamento do progresso?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p class="text-gray-600">Realizamos avaliações periódicas e enviamos relatórios detalhados mensalmente aos pais. Além disso, mantemos um diálogo constante com as escolas dos nossos alunos (quando autorizado) para alinhar nossa atuação com o plano curricular.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-lg font-bold text-gray-800">Há material didático incluído?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p class="text-gray-600">Sim, todos os nossos alunos recebem material didático exclusivo desenvolvido pelos nossos professores, incluindo resumos teóricos, exercícios resolvidos e propostos, além de acesso a uma plataforma online com videoaulas e testes interativos.</p>
+                    </div>
+                </div>
+                
+                <!-- Question 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-md">
+                    <button class="faq-question flex justify-between items-center w-full text-left focus:outline-none">
+                        <h3 class="text-lg font-bold text-gray-800">E se o aluno faltar a uma aula?</h3>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer mt-4 hidden">
+                        <p class="text-gray-600">Caso o aluno não possa comparecer, pedimos que avise com pelo menos 24h de antecedência para que possamos reagendar a aula sem custos adicionais. Para faltas não justificadas, a aula não será reposta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Pronto para dar ao seu filho a preparação que ele merece?</h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">Marque hoje mesmo uma aula experimental gratuita e sem compromisso.</p>
+            <a href="#contactos" class="inline-block bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition duration-300">
+                <i class="fas fa-calendar-check mr-2"></i> Agendar Aula Experimental
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-graduation-cap text-blue-400 text-2xl mr-2"></i>
+                        <span class="font-bold text-xl">Excelência Educativa</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">Centro de explicações especializado na preparação para o 9º ano, ajudando alunos a alcançarem seu potencial máximo.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Links Rápidos</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition duration-300">Início</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-white transition duration-300">Sobre Nós</a></li>
+                        <li><a href="#disciplinas" class="text-gray-400 hover:text-white transition duration-300">Disciplinas</a></li>
+                        <li><a href="#professores" class="text-gray-400 hover:text-white transition duration-300">Professores</a></li>
+                        <li><a href="#contactos" class="text-gray-400 hover:text-white transition duration-300">Contactos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Horário</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-2 text-blue-400"></i>
+                            <div>
+                                <p class="font-medium">Segunda - Sexta</p>
+                                <p>14:00 - 20:00</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-2 text-blue-400"></i>
+                            <div>
+                                <p class="font-medium">Sábado</p>
+                                <p>9:00 - 13:00</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-clock mt-1 mr-2 text-blue-400"></i>
+                            <div>
+                                <p class="font-medium">Domingo</p>
+                                <p>Encerrado</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-6">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscreva para receber dicas de estudo e novidades.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu email" class="px-4 py-3 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 px-4 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Excelência Educativa. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">Termos de Serviço</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.querySelector('form');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Obrigado pela sua mensagem! Entraremos em contacto brevemente.');
+                contactForm.reset();
+            });
+        }
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=dossantosmanuel250/manuel" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
